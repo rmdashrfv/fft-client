@@ -103,11 +103,15 @@ html {
 .modal {
   position: fixed;
   z-index: 1;
+  color: #332A1F;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background-color: tan;
+  background-image: url('https://static.wikia.nocookie.net/finalfantasy/images/9/98/FFTIvalice.png');
+  background-size: cover;
+ 
 }
 
 .hidden {
@@ -131,18 +135,32 @@ html {
   text-transform: uppercase;
   font-style: italic;
   margin: 0;
-  text-shadow: 10px 10px 3px #d33;
+  color: black;
+  text-shadow: 10px 10px 15px #332A1F;
 }
 
 .unit-form {
-  border: 1px solid brown;
-  border-radius: 10px;
+  border: 5px solid #2F2B1C;
   padding: 2% 2.5%;
   position: absolute;
   top: 20%;
   left: 5%;
   min-width: 25%;
-  background-color: #fff;
+  /* background-color: #A39A82; */
+  background-color: #706557;
+  box-shadow: 8px 8px 1px #2F2B1C;
+}
+
+.paper {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url('../public/paper-texture.png');
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.33;
 }
 
 .unit-form input {
@@ -152,34 +170,47 @@ html {
   display: block;
   width: 100%;
   padding: 2%;
+  color: #332A1F;
   margin-bottom: 2%;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 
 .hire-btn {
-  background-color: mediumseagreen;
-  border-radius: 5px;
-  border: 1px solid mediumseagreen;
+  background-color: transparent;
+  border: none;
   padding: 2% 5%;
+  color: #332A1F;
   font-size: 1.5em;
-  color: #fff;
   display: block;
   width: 100%;
   margin-bottom: 1.2%;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .cancel-btn {
   font-size: 1.5em;
-  background-color: #d33;
-  border-radius: 5px;
-  border: 1px solid #d33;
+  background-color: transparent;
+  border: none;
   padding: 2% 5%;
-  color: #fff;
+  color: #332A1F;
+  font-weight: bold;
   display: block;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .modal-header {
+  z-index: 1;
+  position: relative;
   font-size: 4em;
   margin: 4% 0;
   text-align: center;
