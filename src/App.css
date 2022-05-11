@@ -1,38 +1,82 @@
-.App {
+html {
+  font-family: sans-serif;
+}
+
+.weapon {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-width: 23%;
+  min-height: 200px;
+  background-color: #fff;
+}
+
+.weapon-name {
+  font-size: 2em;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weapon-cost {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  color: goldenrod
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.weapon:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.5s;
+  box-shadow: 8px 8px 5px #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weapon-img {
+  height: auto;
+  width: 10%;
+  display: block;
+  margin: 0 auto;
+}
+
+.weapons-grid {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.unit-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.unit-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-width: 23%;
+  min-height: 350px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.unit-card:hover {
+  transform: scale(1.08);
+  transition: transform 0.5s;
+  cursor: pointer;
+  border: 1px solid #d33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.unit-card img {
+  display: block;
+  margin: 0 auto;
+}
+
+.unit-card h2 {
+  font-size: 1.5em;
+  color: #d33;
+  text-align: center;
 }
