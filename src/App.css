@@ -113,3 +113,75 @@ html {
 .hidden {
   display: none;
 }
+
+.unit-portrait {
+  position: absolute;
+  right: 25%;
+  top: 10%;
+  height: auto;
+  width: 25%; 
+}
+
+.unit-name {
+  position: absolute;
+  bottom: 0;
+  font-size: 16em;
+  font-weight: bold;
+  left: 5%;
+  text-transform: uppercase;
+  font-style: italic;
+  margin: 0;
+  text-shadow: 10px 10px 3px #d33;
+}
+
+.unit-form {
+  border: 1px solid brown;
+  border-radius: 10px;
+  padding: 2% 2.5%;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  min-width: 25%;
+  background-color: #fff;
+}
+
+.unit-form input {
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 2%;
+  text-transform: uppercase;
+}
+
+.hire-btn {
+  background-color: mediumseagreen;
+  border-radius: 5px;
+  border: 1px solid mediumseagreen;
+  padding: 2% 5%;
+  font-size: 1.5em;
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.2%;
+}
+
+.cancel-btn {
+  font-size: 1.5em;
+  background-color: #d33;
+  border-radius: 5px;
+  border: 1px solid #d33;
+  padding: 2% 5%;
+  color: #fff;
+  display: block;
+  width: 100%;
+}
+
+.modal-header {
+  font-size: 4em;
+  margin: 4% 0;
+  text-align: center;
+  text-transform: uppercase;
+}

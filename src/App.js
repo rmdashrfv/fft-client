@@ -80,13 +80,14 @@ function App() {
       </div>
       <div className={unitModalVisible ? "modal" : "modal hidden"}>
         <div>
-	  <h4>Hire a {selectedUnit}</h4>
-	  
-          <img src={`${base_url_HD}${selectedUnit.toLowerCase().replace(' ', '-')}.png`} />
-	  <h4>{selectedUnit}</h4>
-	  <input type="text" placeholder="Enter a name" />
-	  <button>HIRE {selectedUnit}</button>
-	  <button onClick={() => { setUnitModalVisible(false) }}>CANCEL</button>
+          <img className="unit-portrait" src={`${base_url_HD}${selectedUnit.toLowerCase().replace(' ', '-')}.png`} />
+	  <h4 className="unit-name">{selectedUnit}</h4>
+	  <div className="unit-form">
+	  <h4 className="modal-header">Hire a {selectedUnit}</h4>
+	    <input type="text" placeholder="Enter a name" />
+	    <button className="hire-btn">HIRE {selectedUnit?.toUpperCase()}</button>
+	    <button className="cancel-btn" onClick={() => { setUnitModalVisible(false) }}>CANCEL</button>
+	  </div>
 	</div>
       </div>
     </div>
