@@ -5,6 +5,8 @@ import Unit from './components/Unit'
 import PartyMember from './components/PartyMember'
 import { useState, useEffect } from 'react';
 
+
+const base_url_HD = 'http://www.ffmages.com/fftactics/images/fft-'
 const base_url = 'http://www.ffmages.com/final-fantasy-tactics/job-classes/'
 const UNITS = ['Archer', 'Bard', 'Calculator', 'Chemist', 'Dancer', 'Geomancer', 'Knight', 'Lancer', 'Mediator', 'Mime', 'Monk', 'Oracle', 'Priest', 'Samurai', 'Squire', 'Summoner', 'Thief', 'Time\ Mage', 'Ninja', 'Wizard']
 
@@ -12,7 +14,9 @@ const UNITS = ['Archer', 'Bard', 'Calculator', 'Chemist', 'Dancer', 'Geomancer',
 function App() {
   const [weapons, setWeapons] = useState([])
   const [selectedWeapon, setSelectedWeapon] = useState(null)
+  const [selectedUnit, setSelectedUnit] = useState(null)
   const [party, setParty] = useState([])
+  const [unitModalVisible, setUnitModalVisible] = useState(false)
 
   const request = async () => {
     try {
@@ -49,7 +53,7 @@ function App() {
         {
           UNITS.map((unit, i) => {
             return(
-              <Unit key={i} unit={unit} setParty={setParty} />
+              <Unit key={i} setUnitModalVisible={setUnitModalVisible} setSelectedUnit={setSelectedUnit} unit={unit} setParty={setParty} />
             )
           })
         }
@@ -73,6 +77,17 @@ function App() {
             )
           })
         }
+      </div>
+      <div className={unitModalVisible ? "modal" : "modal hidden"}>
+        <div>
+	  <h4>Hire a {selectedUnit}</h4>
+	  
+          <img src={`${base_url_HD}${selectedUnit.toLowerCase().replace(' ', '-')}.png`} />
+	  <h4>{selectedUnit}</h4>
+	  <input type="text" placeholder="Enter a name" />
+	  <button>HIRE {selectedUnit}</button>
+	  <button onClick={() => { setUnitModalVisible(false) }}>CANCEL</button>
+	</div>
       </div>
     </div>
   );
