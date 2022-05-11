@@ -2,6 +2,10 @@ html {
   font-family: sans-serif;
 }
 
+.party {
+  display: flex;
+}
+
 .weapon {
   border: 1px solid #ccc;
   border-radius: 10px;

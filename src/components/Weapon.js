@@ -5,7 +5,7 @@ const Weapon = ({weapon, setSelectedWeapon}) => {
   const imgSrc = `https://www.ffmages.com/fftactics/images/icons/${weapon.name.toLowerCase().replace(' ', '-')}.gif`
   return(
     <div className="weapon" onClick={() => {
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      //document.body.scrollTop = document.documentElement.scrollTop = 0;
       setSelectedWeapon(weapon)
     }}>
       <p className="weapon-name">{weapon.name}</p>
