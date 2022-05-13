@@ -4,7 +4,12 @@ html {
 
 @font-face {
   font-family: "FFT";
-  src: url('../public/fft.ttf') format('truetype');
+  src: url('../public/Cinzel.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, p, input[type="text"] {
+  font-family: 'FFT';
+  font-weight: bold;
 }
 
 @keyframes fadeIn {
@@ -27,6 +32,7 @@ html {
     opacity: 1;
   }
 }
+
 
 .party {
   display: flex;
@@ -137,6 +143,7 @@ html {
   background-color: tan;
   background-image: url('../public/world-map.png');
   background-size: cover;
+  animation: fadeIn 0.2s ease-in;
 }
 
 .hidden {
@@ -163,6 +170,7 @@ html {
   margin: 0;
   color: black;
   text-shadow: 10px 10px 15px #332A1F;
+  font-weight: 600;
   animation: 0.65s fadeIn ease-in;
 }
 
@@ -201,6 +209,7 @@ html {
   margin-bottom: 2%;
   text-transform: uppercase;
   position: relative;
+  text-align: center;
   z-index: 1;
 }
 

@@ -34,7 +34,7 @@ function App() {
 
   
   return(
-    <div>
+    <div className="main-screen">
       <h1>War of the Lions</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quis ex minima ipsum praesentium rem repudiandae, odio delectus velit quasi itaque excepturi hic cupiditate, qui nam. Dolores, labore ullam? Sunt.</p>
       <h2>FORMATION</h2>
